@@ -1,20 +1,50 @@
-# cascadia-harness-node
+# ENVIRONMENT.md
 
-This repo is a base harness for building Cascadia node.js applications
-
-Clone this repo, copy and rename for starting each new Cascadia node.js project
-
-Default build is Anthropic API Key. If you want to build with a different LLM, use another key (like XAI_API_KEY), go ahead and put that in env instead. Specify that in the Requirements. 
+Opinionated agentic template. Includes Anthropic SDK, traces directory, eval pattern, the orchestrator/subagent/skills shape. Reuse target is "another agentic harness". 
 
 
-## add an .env file to the project directory with the following key/value pairs 
+## directories and files
 
-ANTHROPIC_API_KEY=
+CLAUDE.md
+
+.gitignore
+.env
+package.json
 
 
-PORT=3000
+context-docs/app/
+CUSTOMER.md
+DECISIONS.md
+ENVIRONMENT.md
+TODO.md
 
-ENVIRONMENT=DEVELOPMENT
+context-docs/template/
+
+
+context-docs/workflow/
+ARCHITECTURE.md
+REQUIREMENTS.md
+STRATEGY.md
+SYSTEM_INSTRUCTIONS.md
+
+
+
+
+
+src/
+server.js
+smoke-test-db.js
+smoke-test-sdk.js
+
+
+src/skills
+
+public/index.html
+
+data/
+output/
+traces/
+
 
 
 ## setup node
@@ -41,8 +71,6 @@ SQLite OK: { k: 'hello' }
 ## test anthropic sdk (claude ai api key)
 
 node src/smoke-test-sdk.js
-
-### output
 Here's one for you:
 
 ---
@@ -74,11 +102,7 @@ Usage: {
 
 node src/server.js
 
-### output
-
 console: listening on port 3000 [DEVELOPMENT]
-
-### open browser urls 
 
 http://localhost:3000/health
 	
