@@ -1,2 +1,0 @@
-# SYSTEM_INSTRUCTIONS.md
-

@@ -1,4 +1,0 @@
-# ARCHITECTURE.md
-
-
-
